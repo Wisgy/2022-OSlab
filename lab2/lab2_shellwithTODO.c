@@ -182,9 +182,9 @@ int main() {
         fgets(cmdline, 256, stdin);
         strtok(cmdline, "\n");
         /* TODO: 基于";"的多命令执行，请自行选择位置添加 */
-        CMD_count=split_string(cmdline,";",COMMANDS)
-        for(int cmdi=0;i<CMD_count;cmdi++){
-            commands={0};
+        CMD_count=split_string(cmdline,";",COMMANDS);
+        for(int cmdi=0;cmdi<CMD_count;cmdi++){
+            *commands=0;
             /* 由管道操作符'|'分割的命令行各个部分，每个部分是一条命令 */
             /* 拆解命令行 */
             cmd_count = split_string(COMMANDS[cmdi], "|", commands);
